@@ -8,7 +8,7 @@ def test_days_left_counts_days_until_due():
     today = date(2026, 10, 19)
     due = date(2026, 10, 22)
     result = days_left(due, today)
-    assert result == 4
+    assert result == 3
 
 
 # TODO 1
