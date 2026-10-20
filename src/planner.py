@@ -12,13 +12,13 @@ def days_left(due, today):
     return (due - today).days
 
 
-def is_urgent(due, today, limit=2):
+def is_urgent(due, today, limit=3):
     """Return True if the task is due within `limit` days.
 
     A task that is already overdue is not urgent. It is late.
     """
     left = days_left(due, today)
-    return 0 <= left < limit
+    return 0 <= left <= limit
 
 
 def sort_by_due(tasks):
